@@ -9,30 +9,32 @@ import UIKit
 
 class WeatherView: UIView {
     
+    private let weatherImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "sun")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     private let weatherStateLabel: UILabel = {
         let label = UILabel()
-        label.text = "State"
+        label.text = "Солнечно"
+        label.textColor = .specialGray
+        label.font = .robotoMedium18()
         label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.5
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let weatherDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Some description"
+        label.text = "Хорошая погода, чтобы позаниматься на улице"
+        label.textColor = .specialGray
+        label.font = .robotoMedium14()
         label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.5
         label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
-    }()
-    
-    private let weatherImage: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "sun")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
     }()
     
     override init(frame: CGRect) {
@@ -49,6 +51,7 @@ class WeatherView: UIView {
     private func setupViews() {
         backgroundColor = .white
         layer.cornerRadius = 10
+        addShadowOnView()
         translatesAutoresizingMaskIntoConstraints = false
         
         self.addSubview(weatherStateLabel)
@@ -61,18 +64,20 @@ extension WeatherView {
     
     func setConstraints() {
         NSLayoutConstraint.activate([
-            weatherImage.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            weatherImage.centerYAnchor.constraint(equalTo: centerYAnchor),
             weatherImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            weatherImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
             weatherImage.widthAnchor.constraint(equalToConstant: 60),
+            weatherImage.heightAnchor.constraint(equalToConstant: 60),
             
             weatherStateLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             weatherStateLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             weatherStateLabel.trailingAnchor.constraint(equalTo: weatherImage.leadingAnchor, constant: -10),
+            weatherStateLabel.heightAnchor.constraint(equalToConstant: 20),
             
             weatherDescriptionLabel.topAnchor.constraint(equalTo: weatherStateLabel.bottomAnchor, constant: 10),
             weatherDescriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            weatherDescriptionLabel.trailingAnchor.constraint(equalTo: weatherImage.leadingAnchor, constant: -10)
+            weatherDescriptionLabel.trailingAnchor.constraint(equalTo: weatherImage.leadingAnchor, constant: -10),
+            weatherDescriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
     }
 }

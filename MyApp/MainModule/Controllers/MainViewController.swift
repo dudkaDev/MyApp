@@ -14,7 +14,6 @@ class MainViewController: UIViewController {
         imageView.backgroundColor = #colorLiteral(red: 0.8044065833, green: 0.8044064641, blue: 0.8044064641, alpha: 1)
         imageView.layer.borderColor = UIColor.white.cgColor
         imageView.layer.borderWidth = 5
-        imageView.layer.cornerRadius = 50                   // исправить хардкод
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -24,17 +23,20 @@ class MainViewController: UIViewController {
         label.text = "Your Name"
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
+        label.font = .robotoMedium24()
+        label.textColor = .specialGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private lazy var addWorkoutButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = #colorLiteral(red: 0.9963226914, green: 0.8627573252, blue: 0.4291374087, alpha: 1)
+        button.backgroundColor = .specialYellow
         button.layer.cornerRadius = 10
         button.setTitle("Add workout", for: .normal)
         button.setImage(UIImage(named: "plus"), for: .normal)
-        button.tintColor = #colorLiteral(red: 0.1807179451, green: 0.3627806008, blue: 0.3323107958, alpha: 1)
+        button.tintColor = .specialDarkGreen
+        button.titleLabel?.font = .robotoMedium12()
         button.imageEdgeInsets = .init(
             top: 0,
             left: 20,
@@ -47,6 +49,7 @@ class MainViewController: UIViewController {
             bottom: 0,
             right: 0
         )
+        button.addShadowOnView()
         button.addTarget(self, action: #selector(addWorkoutButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -54,6 +57,10 @@ class MainViewController: UIViewController {
     
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()
+    
+    override func viewWillLayoutSubviews() {
+        userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width / 2
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +70,7 @@ class MainViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = #colorLiteral(red: 0.9532985091, green: 0.9427116513, blue: 0.9085384011, alpha: 1)
+        view.backgroundColor = .specialBackground
         
         view.addSubview(calendarView)
         view.addSubview(weatherView)

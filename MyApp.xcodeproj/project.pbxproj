@@ -14,6 +14,12 @@
 		5545D53529A4F51C008C7583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5545D53329A4F51C008C7583 /* LaunchScreen.storyboard */; };
 		5545D54229A4FE2A008C7583 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D54129A4FE2A008C7583 /* CalendarView.swift */; };
 		5545D54429A50B77008C7583 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D54329A50B77008C7583 /* WeatherView.swift */; };
+		5545D54829A60E9E008C7583 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5545D54629A60E9E008C7583 /* Roboto-Medium.ttf */; };
+		5545D54929A60E9E008C7583 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5545D54729A60E9E008C7583 /* Roboto-Bold.ttf */; };
+		5545D54D29A61006008C7583 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D54C29A61006008C7583 /* UIView + Extensions.swift */; };
+		5545D54F29A610EB008C7583 /* UIFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D54E29A610EB008C7583 /* UIFont + Extensions.swift */; };
+		5545D55129A612B2008C7583 /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D55029A612B2008C7583 /* UIColor + Extensions.swift */; };
+		5545D55429A61F3F008C7583 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D55329A61F3F008C7583 /* CalendarCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		5545D53629A4F51C008C7583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5545D54129A4FE2A008C7583 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		5545D54329A50B77008C7583 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		5545D54629A60E9E008C7583 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		5545D54729A60E9E008C7583 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		5545D54C29A61006008C7583 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
+		5545D54E29A610EB008C7583 /* UIFont + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extensions.swift"; sourceTree = "<group>"; };
+		5545D55029A612B2008C7583 /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
+		5545D55329A61F3F008C7583 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +70,9 @@
 		5545D52729A4F51A008C7583 /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
-				5545D53E29A4F715008C7583 /* MainModule */,
 				5545D53C29A4F6B1008C7583 /* App */,
+				5545D53E29A4F715008C7583 /* MainModule */,
+				5545D54A29A60FCE008C7583 /* Extensions */,
 				5545D53D29A4F6C6008C7583 /* Resources */,
 			);
 			path = MyApp;
@@ -77,6 +90,7 @@
 		5545D53D29A4F6C6008C7583 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5545D54529A60E63008C7583 /* Fonts */,
 				5545D53129A4F51C008C7583 /* Assets.xcassets */,
 				5545D53329A4F51C008C7583 /* LaunchScreen.storyboard */,
 				5545D53629A4F51C008C7583 /* Info.plist */,
@@ -96,6 +110,7 @@
 		5545D53F29A4F728008C7583 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5545D55229A61F1C008C7583 /* Cells */,
 				5545D54129A4FE2A008C7583 /* CalendarView.swift */,
 				5545D54329A50B77008C7583 /* WeatherView.swift */,
 			);
@@ -108,6 +123,41 @@
 				5545D52C29A4F51A008C7583 /* MainViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5545D54529A60E63008C7583 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5545D54729A60E9E008C7583 /* Roboto-Bold.ttf */,
+				5545D54629A60E9E008C7583 /* Roboto-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5545D54A29A60FCE008C7583 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5545D54B29A60FE8008C7583 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5545D54B29A60FE8008C7583 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				5545D54C29A61006008C7583 /* UIView + Extensions.swift */,
+				5545D54E29A610EB008C7583 /* UIFont + Extensions.swift */,
+				5545D55029A612B2008C7583 /* UIColor + Extensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		5545D55229A61F1C008C7583 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5545D55329A61F3F008C7583 /* CalendarCollectionViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +220,8 @@
 			files = (
 				5545D53529A4F51C008C7583 /* LaunchScreen.storyboard in Resources */,
 				5545D53229A4F51C008C7583 /* Assets.xcassets in Resources */,
+				5545D54929A60E9E008C7583 /* Roboto-Bold.ttf in Resources */,
+				5545D54829A60E9E008C7583 /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,9 +233,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5545D54429A50B77008C7583 /* WeatherView.swift in Sources */,
+				5545D54F29A610EB008C7583 /* UIFont + Extensions.swift in Sources */,
 				5545D52D29A4F51A008C7583 /* MainViewController.swift in Sources */,
 				5545D52929A4F51A008C7583 /* AppDelegate.swift in Sources */,
 				5545D54229A4FE2A008C7583 /* CalendarView.swift in Sources */,
+				5545D55129A612B2008C7583 /* UIColor + Extensions.swift in Sources */,
+				5545D55429A61F3F008C7583 /* CalendarCollectionViewCell.swift in Sources */,
+				5545D54D29A61006008C7583 /* UIView + Extensions.swift in Sources */,
 				5545D52B29A4F51A008C7583 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

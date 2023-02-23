@@ -22,6 +22,10 @@
 		5545D55429A61F3F008C7583 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D55329A61F3F008C7583 /* CalendarCollectionViewCell.swift */; };
 		5545D55629A6606D008C7583 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D55529A6606D008C7583 /* WorkoutTableViewCell.swift */; };
 		5545D55829A666D4008C7583 /* UIStackView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D55729A666D4008C7583 /* UIStackView + Extensions.swift */; };
+		5545D55C29A674CA008C7583 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D55B29A674CA008C7583 /* StatisticViewController.swift */; };
+		5545D56429A67D6C008C7583 /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D56329A67D6C008C7583 /* StatisticTableViewCell.swift */; };
+		5545D56629A766E2008C7583 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D56529A766E2008C7583 /* UILabel + Extensions.swift */; };
+		5545D56929A795AF008C7583 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D56829A795AF008C7583 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		5545D55329A61F3F008C7583 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		5545D55529A6606D008C7583 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		5545D55729A666D4008C7583 /* UIStackView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extensions.swift"; sourceTree = "<group>"; };
+		5545D55B29A674CA008C7583 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		5545D56329A67D6C008C7583 /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
+		5545D56529A766E2008C7583 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
+		5545D56829A795AF008C7583 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				5545D53C29A4F6B1008C7583 /* App */,
+				5545D56729A79596008C7583 /* NavigationModule */,
 				5545D53E29A4F715008C7583 /* MainModule */,
+				5545D55929A6746F008C7583 /* StatisticModule */,
 				5545D54A29A60FCE008C7583 /* Extensions */,
 				5545D53D29A4F6C6008C7583 /* Resources */,
 			);
@@ -153,6 +163,7 @@
 				5545D54E29A610EB008C7583 /* UIFont + Extensions.swift */,
 				5545D55029A612B2008C7583 /* UIColor + Extensions.swift */,
 				5545D55729A666D4008C7583 /* UIStackView + Extensions.swift */,
+				5545D56529A766E2008C7583 /* UILabel + Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -164,6 +175,39 @@
 				5545D55529A6606D008C7583 /* WorkoutTableViewCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		5545D55929A6746F008C7583 /* StatisticModule */ = {
+			isa = PBXGroup;
+			children = (
+				5545D55D29A67B91008C7583 /* Views */,
+				5545D55A29A674A7008C7583 /* Controllers */,
+			);
+			path = StatisticModule;
+			sourceTree = "<group>";
+		};
+		5545D55A29A674A7008C7583 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5545D55B29A674CA008C7583 /* StatisticViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5545D55D29A67B91008C7583 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5545D56329A67D6C008C7583 /* StatisticTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5545D56729A79596008C7583 /* NavigationModule */ = {
+			isa = PBXGroup;
+			children = (
+				5545D56829A795AF008C7583 /* MainTabBarController.swift */,
+			);
+			path = NavigationModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +284,10 @@
 			files = (
 				5545D55829A666D4008C7583 /* UIStackView + Extensions.swift in Sources */,
 				5545D54429A50B77008C7583 /* WeatherView.swift in Sources */,
+				5545D56929A795AF008C7583 /* MainTabBarController.swift in Sources */,
 				5545D54F29A610EB008C7583 /* UIFont + Extensions.swift in Sources */,
+				5545D56429A67D6C008C7583 /* StatisticTableViewCell.swift in Sources */,
+				5545D55C29A674CA008C7583 /* StatisticViewController.swift in Sources */,
 				5545D52D29A4F51A008C7583 /* MainViewController.swift in Sources */,
 				5545D55629A6606D008C7583 /* WorkoutTableViewCell.swift in Sources */,
 				5545D52929A4F51A008C7583 /* AppDelegate.swift in Sources */,
@@ -248,6 +295,7 @@
 				5545D55129A612B2008C7583 /* UIColor + Extensions.swift in Sources */,
 				5545D55429A61F3F008C7583 /* CalendarCollectionViewCell.swift in Sources */,
 				5545D54D29A61006008C7583 /* UIView + Extensions.swift in Sources */,
+				5545D56629A766E2008C7583 /* UILabel + Extensions.swift in Sources */,
 				5545D52B29A4F51A008C7583 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

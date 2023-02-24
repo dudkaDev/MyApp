@@ -26,6 +26,15 @@
 		5545D56429A67D6C008C7583 /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D56329A67D6C008C7583 /* StatisticTableViewCell.swift */; };
 		5545D56629A766E2008C7583 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D56529A766E2008C7583 /* UILabel + Extensions.swift */; };
 		5545D56929A795AF008C7583 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D56829A795AF008C7583 /* MainTabBarController.swift */; };
+		5545D56E29A7A53A008C7583 /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D56D29A7A53A008C7583 /* NewWorkoutViewController.swift */; };
+		5545D57029A7BF8B008C7583 /* RepsOrTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D56F29A7BF8B008C7583 /* RepsOrTimerView.swift */; };
+		5545D57229A7BF9A008C7583 /* DateAndRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D57129A7BF9A008C7583 /* DateAndRepeatView.swift */; };
+		5545D57529A8F3E0008C7583 /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D57429A8F3E0008C7583 /* GreenButton.swift */; };
+		5545D57729A8F505008C7583 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D57629A8F505008C7583 /* CloseButton.swift */; };
+		5545D57929A8F514008C7583 /* BrownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D57829A8F514008C7583 /* BrownTextField.swift */; };
+		5545D57B29A8F523008C7583 /* GreenSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D57A29A8F523008C7583 /* GreenSlider.swift */; };
+		5545D57D29A8F786008C7583 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D57C29A8F786008C7583 /* NameView.swift */; };
+		5545D58029A90446008C7583 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D57F29A90446008C7583 /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +59,15 @@
 		5545D56329A67D6C008C7583 /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
 		5545D56529A766E2008C7583 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
 		5545D56829A795AF008C7583 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5545D56D29A7A53A008C7583 /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
+		5545D56F29A7BF8B008C7583 /* RepsOrTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsOrTimerView.swift; sourceTree = "<group>"; };
+		5545D57129A7BF9A008C7583 /* DateAndRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndRepeatView.swift; sourceTree = "<group>"; };
+		5545D57429A8F3E0008C7583 /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
+		5545D57629A8F505008C7583 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		5545D57829A8F514008C7583 /* BrownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownTextField.swift; sourceTree = "<group>"; };
+		5545D57A29A8F523008C7583 /* GreenSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSlider.swift; sourceTree = "<group>"; };
+		5545D57C29A8F786008C7583 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		5545D57F29A90446008C7583 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +103,7 @@
 				5545D53C29A4F6B1008C7583 /* App */,
 				5545D56729A79596008C7583 /* NavigationModule */,
 				5545D53E29A4F715008C7583 /* MainModule */,
+				5545D56A29A7A4CE008C7583 /* NewWorkoutModule */,
 				5545D55929A6746F008C7583 /* StatisticModule */,
 				5545D54A29A60FCE008C7583 /* Extensions */,
 				5545D53D29A4F6C6008C7583 /* Resources */,
@@ -151,6 +170,7 @@
 		5545D54A29A60FCE008C7583 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5545D57329A8F3C2008C7583 /* Unique */,
 				5545D54B29A60FE8008C7583 /* UIKit */,
 			);
 			path = Extensions;
@@ -208,6 +228,53 @@
 				5545D56829A795AF008C7583 /* MainTabBarController.swift */,
 			);
 			path = NavigationModule;
+			sourceTree = "<group>";
+		};
+		5545D56A29A7A4CE008C7583 /* NewWorkoutModule */ = {
+			isa = PBXGroup;
+			children = (
+				5545D56B29A7A4EC008C7583 /* Views */,
+				5545D56C29A7A4F3008C7583 /* Controllers */,
+			);
+			path = NewWorkoutModule;
+			sourceTree = "<group>";
+		};
+		5545D56B29A7A4EC008C7583 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5545D57E29A8FC46008C7583 /* Subviews */,
+				5545D57C29A8F786008C7583 /* NameView.swift */,
+				5545D57129A7BF9A008C7583 /* DateAndRepeatView.swift */,
+				5545D56F29A7BF8B008C7583 /* RepsOrTimerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5545D56C29A7A4F3008C7583 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5545D56D29A7A53A008C7583 /* NewWorkoutViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5545D57329A8F3C2008C7583 /* Unique */ = {
+			isa = PBXGroup;
+			children = (
+				5545D57429A8F3E0008C7583 /* GreenButton.swift */,
+				5545D57629A8F505008C7583 /* CloseButton.swift */,
+				5545D57829A8F514008C7583 /* BrownTextField.swift */,
+				5545D57A29A8F523008C7583 /* GreenSlider.swift */,
+			);
+			path = Unique;
+			sourceTree = "<group>";
+		};
+		5545D57E29A8FC46008C7583 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				5545D57F29A90446008C7583 /* SliderView.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,17 +351,26 @@
 			files = (
 				5545D55829A666D4008C7583 /* UIStackView + Extensions.swift in Sources */,
 				5545D54429A50B77008C7583 /* WeatherView.swift in Sources */,
+				5545D57929A8F514008C7583 /* BrownTextField.swift in Sources */,
 				5545D56929A795AF008C7583 /* MainTabBarController.swift in Sources */,
+				5545D57529A8F3E0008C7583 /* GreenButton.swift in Sources */,
 				5545D54F29A610EB008C7583 /* UIFont + Extensions.swift in Sources */,
 				5545D56429A67D6C008C7583 /* StatisticTableViewCell.swift in Sources */,
 				5545D55C29A674CA008C7583 /* StatisticViewController.swift in Sources */,
 				5545D52D29A4F51A008C7583 /* MainViewController.swift in Sources */,
+				5545D58029A90446008C7583 /* SliderView.swift in Sources */,
 				5545D55629A6606D008C7583 /* WorkoutTableViewCell.swift in Sources */,
+				5545D57B29A8F523008C7583 /* GreenSlider.swift in Sources */,
+				5545D57D29A8F786008C7583 /* NameView.swift in Sources */,
+				5545D57229A7BF9A008C7583 /* DateAndRepeatView.swift in Sources */,
+				5545D57729A8F505008C7583 /* CloseButton.swift in Sources */,
 				5545D52929A4F51A008C7583 /* AppDelegate.swift in Sources */,
 				5545D54229A4FE2A008C7583 /* CalendarView.swift in Sources */,
 				5545D55129A612B2008C7583 /* UIColor + Extensions.swift in Sources */,
+				5545D57029A7BF8B008C7583 /* RepsOrTimerView.swift in Sources */,
 				5545D55429A61F3F008C7583 /* CalendarCollectionViewCell.swift in Sources */,
 				5545D54D29A61006008C7583 /* UIView + Extensions.swift in Sources */,
+				5545D56E29A7A53A008C7583 /* NewWorkoutViewController.swift in Sources */,
 				5545D56629A766E2008C7583 /* UILabel + Extensions.swift in Sources */,
 				5545D52B29A4F51A008C7583 /* SceneDelegate.swift in Sources */,
 			);

@@ -35,6 +35,8 @@
 		5545D57B29A8F523008C7583 /* GreenSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D57A29A8F523008C7583 /* GreenSlider.swift */; };
 		5545D57D29A8F786008C7583 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D57C29A8F786008C7583 /* NameView.swift */; };
 		5545D58029A90446008C7583 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D57F29A90446008C7583 /* SliderView.swift */; };
+		5545D58329A91109008C7583 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D58229A91109008C7583 /* MainTableView.swift */; };
+		5545D58529A916F6008C7583 /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D58429A916F6008C7583 /* CalendarCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		5545D57A29A8F523008C7583 /* GreenSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSlider.swift; sourceTree = "<group>"; };
 		5545D57C29A8F786008C7583 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		5545D57F29A90446008C7583 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		5545D58229A91109008C7583 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		5545D58429A916F6008C7583 /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		5545D53F29A4F728008C7583 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5545D58129A910F1008C7583 /* Subviews */,
 				5545D55229A61F1C008C7583 /* Cells */,
 				5545D54129A4FE2A008C7583 /* CalendarView.swift */,
 				5545D54329A50B77008C7583 /* WeatherView.swift */,
@@ -277,6 +282,15 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		5545D58129A910F1008C7583 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				5545D58229A91109008C7583 /* MainTableView.swift */,
+				5545D58429A916F6008C7583 /* CalendarCollectionView.swift */,
+			);
+			name = Subviews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -351,8 +365,10 @@
 			files = (
 				5545D55829A666D4008C7583 /* UIStackView + Extensions.swift in Sources */,
 				5545D54429A50B77008C7583 /* WeatherView.swift in Sources */,
+				5545D58329A91109008C7583 /* MainTableView.swift in Sources */,
 				5545D57929A8F514008C7583 /* BrownTextField.swift in Sources */,
 				5545D56929A795AF008C7583 /* MainTabBarController.swift in Sources */,
+				5545D58529A916F6008C7583 /* CalendarCollectionView.swift in Sources */,
 				5545D57529A8F3E0008C7583 /* GreenButton.swift in Sources */,
 				5545D54F29A610EB008C7583 /* UIFont + Extensions.swift in Sources */,
 				5545D56429A67D6C008C7583 /* StatisticTableViewCell.swift in Sources */,

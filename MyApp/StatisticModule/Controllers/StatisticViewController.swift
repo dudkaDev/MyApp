@@ -37,26 +37,14 @@ class StatisticViewController: UIViewController {
         return segmentedControl
     }()
     
-    private let tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.backgroundColor = .none
-        tableView.separatorStyle = .none
-        tableView.bounces = false
-        tableView.showsVerticalScrollIndicator = false
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
-    }()
-    
     private let exercisesLabel = UILabel(text: "Exercises")
-    
-    private let idStatisticTableViewCell = "idStatisticTableViewCell"
+    private let tableView = StatisticTableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViews()
         setConstraints()
-        setDelegate()
     }
     
     private func setupViews() {
@@ -66,12 +54,6 @@ class StatisticViewController: UIViewController {
         view.addSubview(segmentedControl)
         view.addSubview(exercisesLabel)
         view.addSubview(tableView)
-        tableView.register(StatisticTableViewCell.self, forCellReuseIdentifier: idStatisticTableViewCell)
-    }
-    
-    private func setDelegate() {
-        tableView.dataSource = self
-        tableView.delegate = self 
     }
     
     @objc private func segmentedChange() {
@@ -80,30 +62,6 @@ class StatisticViewController: UIViewController {
         } else {
             print("Month")
         }
-    }
-}
-
-//MARK: - UITableViewDataSource
-
-extension StatisticViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: idStatisticTableViewCell,
-            for: indexPath
-        ) as? StatisticTableViewCell else { return UITableViewCell() }
-        return cell
-    }
-}
-
-//MARK: - UITableViewDelegate
-
-extension StatisticViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        55
     }
 }
 

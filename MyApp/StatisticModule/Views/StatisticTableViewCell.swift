@@ -53,6 +53,7 @@ class StatisticTableViewCell: UITableViewCell {
     
     private func setupViews() {
         backgroundColor = .specialBackground
+        selectionStyle = .none
         
         addSubview(exercisesNameLabel)
         addSubview(beforeRepsLabel)

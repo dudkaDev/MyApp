@@ -38,6 +38,11 @@
 		5545D58329A91109008C7583 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D58229A91109008C7583 /* MainTableView.swift */; };
 		5545D58529A916F6008C7583 /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D58429A916F6008C7583 /* CalendarCollectionView.swift */; };
 		5545D58729A9F10C008C7583 /* StatisticTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D58629A9F10C008C7583 /* StatisticTableView.swift */; };
+		5545D58929ACAC83008C7583 /* Int + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D58829ACAC83008C7583 /* Int + Extensions.swift */; };
+		5545D58C29ACB5B6008C7583 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D58B29ACB5B6008C7583 /* WorkoutModel.swift */; };
+		5545D58F29ACBAF3008C7583 /* SliderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D58E29ACBAF3008C7583 /* SliderTypes.swift */; };
+		5545D59129ACBEA1008C7583 /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D59029ACBEA1008C7583 /* Date + Extensions.swift */; };
+		5545D59429ACC5D5008C7583 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D59329ACC5D5008C7583 /* RealmManager.swift */; };
 		A15167025ACC1206B2278AB6 /* Pods_MyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D74C435BDF0A21975F7E605 /* Pods_MyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +81,11 @@
 		5545D58229A91109008C7583 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		5545D58429A916F6008C7583 /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
 		5545D58629A9F10C008C7583 /* StatisticTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableView.swift; sourceTree = "<group>"; };
+		5545D58829ACAC83008C7583 /* Int + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extensions.swift"; sourceTree = "<group>"; };
+		5545D58B29ACB5B6008C7583 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
+		5545D58E29ACBAF3008C7583 /* SliderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTypes.swift; sourceTree = "<group>"; };
+		5545D59029ACBEA1008C7583 /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
+		5545D59329ACC5D5008C7583 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		9A0577AB7E38EBE4E15F95BA /* Pods-MyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.debug.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B09034C68A02905B3EE1A864 /* Pods-MyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.release.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +137,7 @@
 				5545D56A29A7A4CE008C7583 /* NewWorkoutModule */,
 				5545D55929A6746F008C7583 /* StatisticModule */,
 				5545D54A29A60FCE008C7583 /* Extensions */,
+				5545D59229ACC577008C7583 /* Service */,
 				5545D53D29A4F6C6008C7583 /* Resources */,
 			);
 			path = MyApp;
@@ -155,6 +166,7 @@
 		5545D53E29A4F715008C7583 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				5545D58A29ACB5A8008C7583 /* Models */,
 				5545D53F29A4F728008C7583 /* Views */,
 				5545D54029A4F738008C7583 /* Controllers */,
 			);
@@ -194,6 +206,8 @@
 			children = (
 				5545D57329A8F3C2008C7583 /* Unique */,
 				5545D54B29A60FE8008C7583 /* UIKit */,
+				5545D58829ACAC83008C7583 /* Int + Extensions.swift */,
+				5545D59029ACBEA1008C7583 /* Date + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +270,7 @@
 		5545D56A29A7A4CE008C7583 /* NewWorkoutModule */ = {
 			isa = PBXGroup;
 			children = (
+				5545D58D29ACBAE1008C7583 /* Model */,
 				5545D56B29A7A4EC008C7583 /* Views */,
 				5545D56C29A7A4F3008C7583 /* Controllers */,
 			);
@@ -307,6 +322,30 @@
 				5545D58429A916F6008C7583 /* CalendarCollectionView.swift */,
 			);
 			name = Subviews;
+			sourceTree = "<group>";
+		};
+		5545D58A29ACB5A8008C7583 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5545D58B29ACB5B6008C7583 /* WorkoutModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5545D58D29ACBAE1008C7583 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5545D58E29ACBAF3008C7583 /* SliderTypes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5545D59229ACC577008C7583 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5545D59329ACC5D5008C7583 /* RealmManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		91BFFB1A52206EF4CFF7E423 /* Pods */ = {
@@ -440,27 +479,32 @@
 				5545D57929A8F514008C7583 /* BrownTextField.swift in Sources */,
 				5545D56929A795AF008C7583 /* MainTabBarController.swift in Sources */,
 				5545D58529A916F6008C7583 /* CalendarCollectionView.swift in Sources */,
+				5545D58F29ACBAF3008C7583 /* SliderTypes.swift in Sources */,
 				5545D57529A8F3E0008C7583 /* GreenButton.swift in Sources */,
 				5545D54F29A610EB008C7583 /* UIFont + Extensions.swift in Sources */,
 				5545D56429A67D6C008C7583 /* StatisticTableViewCell.swift in Sources */,
 				5545D55C29A674CA008C7583 /* StatisticViewController.swift in Sources */,
+				5545D59129ACBEA1008C7583 /* Date + Extensions.swift in Sources */,
 				5545D52D29A4F51A008C7583 /* MainViewController.swift in Sources */,
 				5545D58029A90446008C7583 /* SliderView.swift in Sources */,
 				5545D55629A6606D008C7583 /* WorkoutTableViewCell.swift in Sources */,
 				5545D57B29A8F523008C7583 /* GreenSlider.swift in Sources */,
 				5545D57D29A8F786008C7583 /* NameView.swift in Sources */,
 				5545D57229A7BF9A008C7583 /* DateAndRepeatView.swift in Sources */,
+				5545D58C29ACB5B6008C7583 /* WorkoutModel.swift in Sources */,
 				5545D57729A8F505008C7583 /* CloseButton.swift in Sources */,
 				5545D52929A4F51A008C7583 /* AppDelegate.swift in Sources */,
 				5545D54229A4FE2A008C7583 /* CalendarView.swift in Sources */,
 				5545D55129A612B2008C7583 /* UIColor + Extensions.swift in Sources */,
 				5545D57029A7BF8B008C7583 /* RepsOrTimerView.swift in Sources */,
 				5545D55429A61F3F008C7583 /* CalendarCollectionViewCell.swift in Sources */,
+				5545D59429ACC5D5008C7583 /* RealmManager.swift in Sources */,
 				5545D54D29A61006008C7583 /* UIView + Extensions.swift in Sources */,
 				5545D56E29A7A53A008C7583 /* NewWorkoutViewController.swift in Sources */,
 				5545D58729A9F10C008C7583 /* StatisticTableView.swift in Sources */,
 				5545D56629A766E2008C7583 /* UILabel + Extensions.swift in Sources */,
 				5545D52B29A4F51A008C7583 /* SceneDelegate.swift in Sources */,
+				5545D58929ACAC83008C7583 /* Int + Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

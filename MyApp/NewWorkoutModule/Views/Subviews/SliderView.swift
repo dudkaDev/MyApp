@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol SliderViewProtocol: AnyObject {
+    func changeValue(type: SliderType, value: Int)
+}
+
 class SliderView: UIView {
+    
+    weak var delegate: SliderViewProtocol?
     
     private let nameLabel = UILabel(
         text: "Name",
@@ -25,15 +31,34 @@ class SliderView: UIView {
     
     private var stackView = UIStackView()
     
+    public var sliderType: SliderType?
+    
+    public var isActive = true {
+        didSet {
+            if self.isActive {
+                nameLabel.alpha = 1
+                numberLabel.alpha = 1
+                slider.alpha = 1
+            } else {
+                nameLabel.alpha = 0.5
+                numberLabel.alpha = 0.5
+                slider.alpha = 0.5
+                slider.value = 0
+                numberLabel.text = "0"
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    convenience init(name: String, minValue: Float, maxValue: Float) {
+    convenience init(name: String, minValue: Float, maxValue: Float, type: SliderType) {
         self.init(frame: .zero)
         nameLabel.text = name
         slider.minimumValue = minValue
         slider.maximumValue = maxValue
+        sliderType = type
         
         setupViews()
         setConstraints()
@@ -62,6 +87,13 @@ class SliderView: UIView {
         addSubview(stackView)
     }
     
+    @objc private func sliderChanged() {
+        let intValueSlider = Int(slider.value)
+        numberLabel.text = sliderType == .timer ? intValueSlider.getTimeFromSeconds() : "\(intValueSlider)"
+        guard let type = sliderType else { return }
+        delegate?.changeValue(type: type, value: intValueSlider)
+    }
+    
     private func setConstraints() {
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
@@ -69,9 +101,5 @@ class SliderView: UIView {
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)
         ])
-    }
-    
-    @objc private func sliderChanged() {
-        print(slider.value)
     }
 }

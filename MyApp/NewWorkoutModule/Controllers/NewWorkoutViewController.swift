@@ -25,6 +25,10 @@ class NewWorkoutViewController: UIViewController {
     
     private var stackView = UIStackView()
     
+    private var workoutModel = WorkoutModel()
+    
+    private let testImage = UIImage(named: "testWorkout")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,7 +55,23 @@ class NewWorkoutViewController: UIViewController {
     }
     
     @objc private func saveButtonTapped() {
-        print("save")
+        setModel()
+        RealmManager.shared.saveWorkoutModel(workoutModel)
+    }
+    
+    private func setModel() {
+        workoutModel.workoutName = nameView.getNameTextFieldText()
+        
+        workoutModel.workoutDate = dateAndRepeatView.getDateAndRepeat().date
+        workoutModel.workoutNumberOfDay = dateAndRepeatView.getDateAndRepeat().date.getWeekdayNumber()
+        workoutModel.workoutRepeat = dateAndRepeatView.getDateAndRepeat().repeat
+        
+        workoutModel.workoutSets = repsOrTimerView.sets
+        workoutModel.workoutReps = repsOrTimerView.reps
+        workoutModel.workoutTimer = repsOrTimerView.timer
+        
+        guard let imageData = testImage?.pngData() else { return }
+        workoutModel.workoutImage = imageData
     }
 }
 

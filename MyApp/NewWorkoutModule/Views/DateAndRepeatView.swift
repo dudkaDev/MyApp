@@ -86,6 +86,11 @@ class DateAndRepeatView: UIView {
     public func getDateAndRepeat() -> (date: Date, repeat: Bool) {
         (datePicker.date, repeatSwitch.isOn)
     }
+    
+    public func resetDataAndRepeat() {
+        datePicker.date = Date()
+        repeatSwitch.isOn = true
+    }
 }
 
 //MARK: - Set Constraints

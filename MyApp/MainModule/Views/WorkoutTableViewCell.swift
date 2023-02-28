@@ -107,9 +107,11 @@ class WorkoutTableViewCell: UITableViewCell {
     }
     
     @objc private func startButtonTapped() {
-        print("startButtonTapped")
+        print("START")
     }
 }
+
+//MARK: - Set Constraints
 
 extension WorkoutTableViewCell {
     

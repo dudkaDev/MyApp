@@ -48,7 +48,11 @@ class RepsOrTimerView: UIView {
         addSubview(repsOrTimerLabel)
         addSubview(backView)
         
-        stackView = UIStackView(arrangedSubviews: [setsView, repeatOrTimerLabel, repsView, timerView], axis: .vertical, spacing: 20)
+        stackView = UIStackView(
+            arrangedSubviews: [setsView, repeatOrTimerLabel, repsView, timerView],
+            axis: .vertical,
+            spacing: 20
+        )
         addSubview(stackView)
     }
     
@@ -56,6 +60,12 @@ class RepsOrTimerView: UIView {
         setsView.delegate = self
         repsView.delegate = self
         timerView.delegate = self
+    }
+    
+    public func resetSliderViewValues() {
+        setsView.resetValues()
+        repsView.resetValues()
+        timerView.resetValues()
     }
 }
 

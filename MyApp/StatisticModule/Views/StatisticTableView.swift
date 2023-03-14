@@ -11,6 +11,8 @@ class StatisticTableView: UITableView {
     
     private let idStatisticTableViewCell = "idStatisticTableViewCell"
     
+    private var differenceArray = [DifferenceWorkout]()
+    
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
@@ -35,13 +37,17 @@ class StatisticTableView: UITableView {
         dataSource = self
         delegate = self
     }
+    
+    public func setDifferenceArray(array: [DifferenceWorkout]) {
+        differenceArray = array
+    }
 }
 
 //MARK: - UITableViewDataSource
 
 extension StatisticTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        differenceArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,6 +55,8 @@ extension StatisticTableView: UITableViewDataSource {
             withIdentifier: idStatisticTableViewCell,
             for: indexPath
         ) as? StatisticTableViewCell else { return UITableViewCell() }
+        let model = differenceArray[indexPath.row]
+        cell.configure(differenceWorkout: model)
         return cell
     }
 }

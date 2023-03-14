@@ -46,6 +46,7 @@
 		5545D59929ACE332008C7583 /* StartWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D59829ACE332008C7583 /* StartWorkoutViewController.swift */; };
 		5545D59B29ACF1D6008C7583 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D59A29ACF1D6008C7583 /* DetailsView.swift */; };
 		559675F029AE0EEC00823A16 /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559675EF29AE0EEC00823A16 /* UIViewController + Extensions.swift */; };
+		55B7CBA829C0B61B00FFA2E7 /* DifferenceWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7CBA729C0B61B00FFA2E7 /* DifferenceWorkout.swift */; };
 		A15167025ACC1206B2278AB6 /* Pods_MyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D74C435BDF0A21975F7E605 /* Pods_MyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		5545D59829ACE332008C7583 /* StartWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutViewController.swift; sourceTree = "<group>"; };
 		5545D59A29ACF1D6008C7583 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		559675EF29AE0EEC00823A16 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
+		55B7CBA729C0B61B00FFA2E7 /* DifferenceWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferenceWorkout.swift; sourceTree = "<group>"; };
 		9A0577AB7E38EBE4E15F95BA /* Pods-MyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.debug.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B09034C68A02905B3EE1A864 /* Pods-MyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.release.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -244,6 +246,7 @@
 		5545D55929A6746F008C7583 /* StatisticModule */ = {
 			isa = PBXGroup;
 			children = (
+				55B7CBA629C0B60A00FFA2E7 /* Models */,
 				5545D55D29A67B91008C7583 /* Views */,
 				5545D55A29A674A7008C7583 /* Controllers */,
 			);
@@ -379,6 +382,14 @@
 				5545D59A29ACF1D6008C7583 /* DetailsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		55B7CBA629C0B60A00FFA2E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				55B7CBA729C0B61B00FFA2E7 /* DifferenceWorkout.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		91BFFB1A52206EF4CFF7E423 /* Pods */ = {
@@ -518,6 +529,7 @@
 				5545D54F29A610EB008C7583 /* UIFont + Extensions.swift in Sources */,
 				559675F029AE0EEC00823A16 /* UIViewController + Extensions.swift in Sources */,
 				5545D56429A67D6C008C7583 /* StatisticTableViewCell.swift in Sources */,
+				55B7CBA829C0B61B00FFA2E7 /* DifferenceWorkout.swift in Sources */,
 				5545D55C29A674CA008C7583 /* StatisticViewController.swift in Sources */,
 				5545D59129ACBEA1008C7583 /* Date + Extensions.swift in Sources */,
 				5545D52D29A4F51A008C7583 /* MainViewController.swift in Sources */,

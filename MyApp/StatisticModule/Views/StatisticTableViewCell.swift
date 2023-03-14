@@ -69,6 +69,21 @@ class StatisticTableViewCell: UITableViewCell {
         addSubview(lineView)
     }
     
+    public func configure(differenceWorkout: DifferenceWorkout) {
+        exercisesNameLabel.text = differenceWorkout.name
+        beforeRepsLabel.text = "Before: \(differenceWorkout.firstReps)"
+        nowRepsLabel.text = "Now: \(differenceWorkout.lastReps)"
+        
+        let difference = differenceWorkout.lastReps - differenceWorkout.firstReps
+        progressCountLabel.text = "\(difference)"
+        
+        switch difference {
+        case ..<0: progressCountLabel.textColor = .specialGreen
+        case 1...: progressCountLabel.textColor = .specialYellow
+        default: progressCountLabel.textColor = .specialGray
+        }
+    }
+    
     private func setConstraints() {
         NSLayoutConstraint.activate([
             exercisesNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),

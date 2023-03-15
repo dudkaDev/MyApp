@@ -43,10 +43,13 @@
 		5545D58F29ACBAF3008C7583 /* SliderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D58E29ACBAF3008C7583 /* SliderTypes.swift */; };
 		5545D59129ACBEA1008C7583 /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D59029ACBEA1008C7583 /* Date + Extensions.swift */; };
 		5545D59429ACC5D5008C7583 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D59329ACC5D5008C7583 /* RealmManager.swift */; };
-		5545D59929ACE332008C7583 /* StartWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D59829ACE332008C7583 /* StartWorkoutViewController.swift */; };
+		5545D59929ACE332008C7583 /* RepsWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D59829ACE332008C7583 /* RepsWorkoutViewController.swift */; };
 		5545D59B29ACF1D6008C7583 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545D59A29ACF1D6008C7583 /* DetailsView.swift */; };
 		559675F029AE0EEC00823A16 /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559675EF29AE0EEC00823A16 /* UIViewController + Extensions.swift */; };
 		55B7CBA829C0B61B00FFA2E7 /* DifferenceWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7CBA729C0B61B00FFA2E7 /* DifferenceWorkout.swift */; };
+		55B7CBB129C1E66B00FFA2E7 /* TimerWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7CBB029C1E66B00FFA2E7 /* TimerWorkoutViewController.swift */; };
+		55B7CBB329C1E94400FFA2E7 /* TimerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7CBB229C1E94400FFA2E7 /* TimerDetailsView.swift */; };
+		55B7CBB529C1EE4E00FFA2E7 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B7CBB429C1EE4E00FFA2E7 /* CustomAlert.swift */; };
 		A15167025ACC1206B2278AB6 /* Pods_MyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D74C435BDF0A21975F7E605 /* Pods_MyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,10 +93,13 @@
 		5545D58E29ACBAF3008C7583 /* SliderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTypes.swift; sourceTree = "<group>"; };
 		5545D59029ACBEA1008C7583 /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
 		5545D59329ACC5D5008C7583 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		5545D59829ACE332008C7583 /* StartWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutViewController.swift; sourceTree = "<group>"; };
+		5545D59829ACE332008C7583 /* RepsWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsWorkoutViewController.swift; sourceTree = "<group>"; };
 		5545D59A29ACF1D6008C7583 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		559675EF29AE0EEC00823A16 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
 		55B7CBA729C0B61B00FFA2E7 /* DifferenceWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferenceWorkout.swift; sourceTree = "<group>"; };
+		55B7CBB029C1E66B00FFA2E7 /* TimerWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWorkoutViewController.swift; sourceTree = "<group>"; };
+		55B7CBB229C1E94400FFA2E7 /* TimerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDetailsView.swift; sourceTree = "<group>"; };
+		55B7CBB429C1EE4E00FFA2E7 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		9A0577AB7E38EBE4E15F95BA /* Pods-MyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.debug.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B09034C68A02905B3EE1A864 /* Pods-MyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.release.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,7 +149,8 @@
 				5545D56729A79596008C7583 /* NavigationModule */,
 				5545D53E29A4F715008C7583 /* MainModule */,
 				5545D56A29A7A4CE008C7583 /* NewWorkoutModule */,
-				5545D59529ACCCBC008C7583 /* StartWorkoutModule */,
+				5545D59529ACCCBC008C7583 /* RepsWorkoutModule */,
+				55B7CBAD29C1E61D00FFA2E7 /* TimerWorkoutModule */,
 				5545D55929A6746F008C7583 /* StatisticModule */,
 				5545D54A29A60FCE008C7583 /* Extensions */,
 				5545D59229ACC577008C7583 /* Service */,
@@ -314,6 +321,7 @@
 				5545D57629A8F505008C7583 /* CloseButton.swift */,
 				5545D57829A8F514008C7583 /* BrownTextField.swift */,
 				5545D57A29A8F523008C7583 /* GreenSlider.swift */,
+				55B7CBB429C1EE4E00FFA2E7 /* CustomAlert.swift */,
 			);
 			path = Unique;
 			sourceTree = "<group>";
@@ -359,19 +367,19 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		5545D59529ACCCBC008C7583 /* StartWorkoutModule */ = {
+		5545D59529ACCCBC008C7583 /* RepsWorkoutModule */ = {
 			isa = PBXGroup;
 			children = (
 				5545D59729ACCD01008C7583 /* Views */,
 				5545D59629ACCCF5008C7583 /* Controllers */,
 			);
-			path = StartWorkoutModule;
+			path = RepsWorkoutModule;
 			sourceTree = "<group>";
 		};
 		5545D59629ACCCF5008C7583 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5545D59829ACE332008C7583 /* StartWorkoutViewController.swift */,
+				5545D59829ACE332008C7583 /* RepsWorkoutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -390,6 +398,31 @@
 				55B7CBA729C0B61B00FFA2E7 /* DifferenceWorkout.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		55B7CBAD29C1E61D00FFA2E7 /* TimerWorkoutModule */ = {
+			isa = PBXGroup;
+			children = (
+				55B7CBAF29C1E64E00FFA2E7 /* Views */,
+				55B7CBAE29C1E64600FFA2E7 /* Controllers */,
+			);
+			path = TimerWorkoutModule;
+			sourceTree = "<group>";
+		};
+		55B7CBAE29C1E64600FFA2E7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				55B7CBB029C1E66B00FFA2E7 /* TimerWorkoutViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		55B7CBAF29C1E64E00FFA2E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				55B7CBB229C1E94400FFA2E7 /* TimerDetailsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		91BFFB1A52206EF4CFF7E423 /* Pods */ = {
@@ -522,7 +555,7 @@
 				5545D58329A91109008C7583 /* MainTableView.swift in Sources */,
 				5545D57929A8F514008C7583 /* BrownTextField.swift in Sources */,
 				5545D56929A795AF008C7583 /* MainTabBarController.swift in Sources */,
-				5545D59929ACE332008C7583 /* StartWorkoutViewController.swift in Sources */,
+				5545D59929ACE332008C7583 /* RepsWorkoutViewController.swift in Sources */,
 				5545D58529A916F6008C7583 /* CalendarCollectionView.swift in Sources */,
 				5545D58F29ACBAF3008C7583 /* SliderTypes.swift in Sources */,
 				5545D57529A8F3E0008C7583 /* GreenButton.swift in Sources */,
@@ -538,6 +571,7 @@
 				5545D57B29A8F523008C7583 /* GreenSlider.swift in Sources */,
 				5545D57D29A8F786008C7583 /* NameView.swift in Sources */,
 				5545D57229A7BF9A008C7583 /* DateAndRepeatView.swift in Sources */,
+				55B7CBB329C1E94400FFA2E7 /* TimerDetailsView.swift in Sources */,
 				5545D58C29ACB5B6008C7583 /* WorkoutModel.swift in Sources */,
 				5545D57729A8F505008C7583 /* CloseButton.swift in Sources */,
 				5545D52929A4F51A008C7583 /* AppDelegate.swift in Sources */,
@@ -550,7 +584,9 @@
 				5545D56E29A7A53A008C7583 /* NewWorkoutViewController.swift in Sources */,
 				5545D58729A9F10C008C7583 /* StatisticTableView.swift in Sources */,
 				5545D56629A766E2008C7583 /* UILabel + Extensions.swift in Sources */,
+				55B7CBB129C1E66B00FFA2E7 /* TimerWorkoutViewController.swift in Sources */,
 				5545D59B29ACF1D6008C7583 /* DetailsView.swift in Sources */,
+				55B7CBB529C1EE4E00FFA2E7 /* CustomAlert.swift in Sources */,
 				5545D52B29A4F51A008C7583 /* SceneDelegate.swift in Sources */,
 				5545D58929ACAC83008C7583 /* Int + Extensions.swift in Sources */,
 			);

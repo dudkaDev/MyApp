@@ -37,11 +37,16 @@ class StatisticViewController: UIViewController {
         return segmentedControl
     }()
     
+    private let nameTextField = BrownTextField()
+    
     private let exercisesLabel = UILabel(text: "Exercises")
     private let tableView = StatisticTableView()
     
     private var workoutArray = [WorkoutModel]()
     private var differenceArray = [DifferenceWorkout]()
+    private var filteredArray = [DifferenceWorkout]()
+    
+    private var isFiltered = false
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -62,6 +67,8 @@ class StatisticViewController: UIViewController {
         
         view.addSubview(statisticLabel)
         view.addSubview(segmentedControl)
+        nameTextField.brownDelegate = self
+        view.addSubview(nameTextField)
         view.addSubview(exercisesLabel)
         view.addSubview(tableView)
     }
@@ -118,6 +125,44 @@ class StatisticViewController: UIViewController {
         getDifferenceModel(dateStart: dateToday.offsetDay(day: 7))
         tableView.reloadData()
     }
+    
+    private func filteringWorkouts(text: String) {
+        for workout in differenceArray {
+            if workout.name.lowercased().contains(text.lowercased()) {
+                filteredArray.append(workout)
+            }
+        }
+    }
+}
+
+//MARK: - BrownTextFieldProtocol
+
+extension StatisticViewController: BrownTextFieldProtocol {
+   
+    func typing(range: NSRange, replacementString: String) {
+        if let text = nameTextField.text, let textRange = Range(range, in: text) {
+            let updatedText = text.replacingCharacters(in: textRange, with: replacementString)
+            filteredArray = [DifferenceWorkout]()
+            isFiltered = updatedText.count > 0
+            filteringWorkouts(text: updatedText)
+        }
+        
+        if isFiltered {
+            tableView.setDifferenceArray(array: filteredArray)
+        } else {
+            tableView.setDifferenceArray(array: differenceArray)
+        }
+        
+        tableView.reloadData()
+    }
+    
+    func clear() {
+        isFiltered = false
+        differenceArray = [DifferenceWorkout]()
+        let dateToday = Date().localDate()
+        getDifferenceModel(dateStart: dateToday.offsetDay(day: 7))
+        tableView.reloadData()
+    }
 }
 
 //MARK: - Set Constraints
@@ -133,7 +178,12 @@ extension StatisticViewController {
             segmentedControl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             segmentedControl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
-            exercisesLabel.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 10),
+            nameTextField.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 10),
+            nameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            nameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            nameTextField.heightAnchor.constraint(equalToConstant: 38),
+            
+            exercisesLabel.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 10),
             exercisesLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             exercisesLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             

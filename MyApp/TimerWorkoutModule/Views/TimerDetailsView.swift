@@ -7,10 +7,10 @@
 
 import UIKit
 
-//protocol NextSetProtocol: AnyObject {
-//    func nextSetTapped()
-//    func editingTapped()
-//}
+protocol NextSetTimerProtocol: AnyObject {
+    func nextSetTapped()
+    func editingTapped()
+}
 
 class TimerDetailsView: UIView {
     
@@ -49,13 +49,13 @@ class TimerDetailsView: UIView {
         return view
     }()
     
-    private let repsLabel = UILabel(
-        text: "Reps",
+    private let timerLabel = UILabel(
+        text: "Time of set",
         font: .robotoMedium18(),
         textColor: .specialGray
     )
     
-    private let repsNumberLabel = UILabel(
+    private let timerNumberLabel = UILabel(
         text: "20",
         font: .robotoMedium24(),
         textColor: .specialGray
@@ -94,7 +94,7 @@ class TimerDetailsView: UIView {
     var setsStackView = UIStackView()
     var repsStackView = UIStackView()
     
-//    weak var cellNextSetDelegate: NextSetProtocol?
+    weak var cellNextSetTimerDelegate: NextSetTimerProtocol?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -123,7 +123,7 @@ class TimerDetailsView: UIView {
         backView.addSubview(setsLineView)
         
         repsStackView = UIStackView(
-            arrangedSubviews: [repsLabel, repsNumberLabel],
+            arrangedSubviews: [timerLabel, timerNumberLabel],
             axis: .horizontal,
             spacing: 10
         )
@@ -136,11 +136,22 @@ class TimerDetailsView: UIView {
     }
     
     @objc func editingButtonTapped() {
-//        cellNextSetDelegate?.editingTapped()
+        cellNextSetTimerDelegate?.editingTapped()
     }
     
     @objc func nextSetButtonTapped() {
-//        cellNextSetDelegate?.nextSetTapped()
+        cellNextSetTimerDelegate?.nextSetTapped()
+    }
+    
+    public func refreshLabels(model: WorkoutModel, numberOfSet: Int) {
+        exerciseNameLabel.text = model.workoutName
+        setsNumberLabel.text = "\(numberOfSet)/\(model.workoutSets)"
+        timerNumberLabel.text = "\(model.workoutTimer.getTimeFromSeconds())"
+    }
+    
+    public func buttonsIsEnable(_ value: Bool) {
+        editingButton.isEnabled = value
+        nextSetButton.isEnabled = value
     }
 }
 

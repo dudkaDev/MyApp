@@ -9,14 +9,11 @@ import UIKit
 
 class StatisticViewController: UIViewController {
     
-    private let statisticLabel: UILabel = {
-        let label = UILabel()
-        label.text = "STATISTIC"
-        label.font = .robotoMedium24()
-        label.textColor = .specialGray
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private let statisticLabel = UILabel(
+        text: "STATISTICS",
+        font: .robotoMedium24(),
+        textColor: .specialGray
+    )
     
     private lazy var segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl(items: ["Week", "Month"])

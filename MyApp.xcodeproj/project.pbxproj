@@ -54,6 +54,7 @@
 		55CB3BA129DC272F001DDE88 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB3BA029DC272F001DDE88 /* ProfileCollectionViewCell.swift */; };
 		55CB3BA329DC29AA001DDE88 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB3BA229DC29AA001DDE88 /* SettingsViewController.swift */; };
 		55CB3BA529DC2CAF001DDE88 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB3BA429DC2CAF001DDE88 /* UserModel.swift */; };
+		55CB3BA729DC607A001DDE88 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB3BA629DC607A001DDE88 /* Notifications.swift */; };
 		A15167025ACC1206B2278AB6 /* Pods_MyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D74C435BDF0A21975F7E605 /* Pods_MyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		55CB3BA029DC272F001DDE88 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		55CB3BA229DC29AA001DDE88 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		55CB3BA429DC2CAF001DDE88 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		55CB3BA629DC607A001DDE88 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		9A0577AB7E38EBE4E15F95BA /* Pods-MyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.debug.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B09034C68A02905B3EE1A864 /* Pods-MyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.release.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +175,7 @@
 			children = (
 				5545D52829A4F51A008C7583 /* AppDelegate.swift */,
 				5545D52A29A4F51A008C7583 /* SceneDelegate.swift */,
+				55CB3BA629DC607A001DDE88 /* Notifications.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				5545D57D29A8F786008C7583 /* NameView.swift in Sources */,
 				5545D57229A7BF9A008C7583 /* DateAndRepeatView.swift in Sources */,
 				55CB3BA329DC29AA001DDE88 /* SettingsViewController.swift in Sources */,
+				55CB3BA729DC607A001DDE88 /* Notifications.swift in Sources */,
 				55B7CBB329C1E94400FFA2E7 /* TimerDetailsView.swift in Sources */,
 				5545D58C29ACB5B6008C7583 /* WorkoutModel.swift in Sources */,
 				5545D57729A8F505008C7583 /* CloseButton.swift in Sources */,

@@ -54,9 +54,25 @@ class WeatherView: UIView {
         addShadowOnView()
         translatesAutoresizingMaskIntoConstraints = false
         
-        self.addSubview(weatherStateLabel)
-        self.addSubview(weatherDescriptionLabel)
-        self.addSubview(weatherImage)
+        addSubview(weatherStateLabel)
+        addSubview(weatherDescriptionLabel)
+        addSubview(weatherImage)
+    }
+    
+    public func updateImage(data: Data) {
+        guard let image = UIImage(data: data) else { return }
+        weatherImage.image = image
+    }
+    
+    public func updateLabels(model: WeatherModel) {
+        weatherStateLabel.text = model.weather[0].myDescription + " \(model.main.temperatureCelsius)C"
+        
+        switch model.weather[0].description {
+        case "few clouds":
+            weatherDescriptionLabel.text = "Лучше провести тренировку дома"
+        default:
+            weatherDescriptionLabel.text = "No data"
+        }
     }
 }
 

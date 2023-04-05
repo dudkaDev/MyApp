@@ -55,6 +55,10 @@
 		55CB3BA329DC29AA001DDE88 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB3BA229DC29AA001DDE88 /* SettingsViewController.swift */; };
 		55CB3BA529DC2CAF001DDE88 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB3BA429DC2CAF001DDE88 /* UserModel.swift */; };
 		55CB3BA729DC607A001DDE88 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB3BA629DC607A001DDE88 /* Notifications.swift */; };
+		55CB3BA929DD7EA7001DDE88 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB3BA829DD7EA7001DDE88 /* WeatherModel.swift */; };
+		55CB3BAC29DD8076001DDE88 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB3BAB29DD8076001DDE88 /* NetworkRequest.swift */; };
+		55CB3BAE29DD82D3001DDE88 /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB3BAD29DD82D3001DDE88 /* NetworkDataFetch.swift */; };
+		55CB3BB029DD86A7001DDE88 /* NetworkImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB3BAF29DD86A7001DDE88 /* NetworkImageRequest.swift */; };
 		A15167025ACC1206B2278AB6 /* Pods_MyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D74C435BDF0A21975F7E605 /* Pods_MyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +114,10 @@
 		55CB3BA229DC29AA001DDE88 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		55CB3BA429DC2CAF001DDE88 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		55CB3BA629DC607A001DDE88 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		55CB3BA829DD7EA7001DDE88 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		55CB3BAB29DD8076001DDE88 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		55CB3BAD29DD82D3001DDE88 /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
+		55CB3BAF29DD86A7001DDE88 /* NetworkImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageRequest.swift; sourceTree = "<group>"; };
 		9A0577AB7E38EBE4E15F95BA /* Pods-MyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.debug.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B09034C68A02905B3EE1A864 /* Pods-MyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.release.xcconfig"; path = "Target Support Files/Pods-MyApp/Pods-MyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +173,7 @@
 				55CB3B9929D6CC00001DDE88 /* UserProfileModule */,
 				5545D54A29A60FCE008C7583 /* Extensions */,
 				5545D59229ACC577008C7583 /* Service */,
+				55CB3BAA29DD8029001DDE88 /* Network */,
 				5545D53D29A4F6C6008C7583 /* Resources */,
 			);
 			path = MyApp;
@@ -360,6 +369,7 @@
 			children = (
 				5545D58B29ACB5B6008C7583 /* WorkoutModel.swift */,
 				55CB3BA429DC2CAF001DDE88 /* UserModel.swift */,
+				55CB3BA829DD7EA7001DDE88 /* WeatherModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -462,6 +472,16 @@
 				55CB3BA229DC29AA001DDE88 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		55CB3BAA29DD8029001DDE88 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				55CB3BAB29DD8076001DDE88 /* NetworkRequest.swift */,
+				55CB3BAD29DD82D3001DDE88 /* NetworkDataFetch.swift */,
+				55CB3BAF29DD86A7001DDE88 /* NetworkImageRequest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		91BFFB1A52206EF4CFF7E423 /* Pods */ = {
@@ -592,7 +612,9 @@
 				5545D55829A666D4008C7583 /* UIStackView + Extensions.swift in Sources */,
 				55CB3B9D29D6CC63001DDE88 /* ProfileViewController.swift in Sources */,
 				5545D54429A50B77008C7583 /* WeatherView.swift in Sources */,
+				55CB3BAE29DD82D3001DDE88 /* NetworkDataFetch.swift in Sources */,
 				5545D58329A91109008C7583 /* MainTableView.swift in Sources */,
+				55CB3BA929DD7EA7001DDE88 /* WeatherModel.swift in Sources */,
 				5545D57929A8F514008C7583 /* BrownTextField.swift in Sources */,
 				5545D56929A795AF008C7583 /* MainTabBarController.swift in Sources */,
 				5545D59929ACE332008C7583 /* RepsWorkoutViewController.swift in Sources */,
@@ -613,6 +635,7 @@
 				5545D57D29A8F786008C7583 /* NameView.swift in Sources */,
 				5545D57229A7BF9A008C7583 /* DateAndRepeatView.swift in Sources */,
 				55CB3BA329DC29AA001DDE88 /* SettingsViewController.swift in Sources */,
+				55CB3BB029DD86A7001DDE88 /* NetworkImageRequest.swift in Sources */,
 				55CB3BA729DC607A001DDE88 /* Notifications.swift in Sources */,
 				55B7CBB329C1E94400FFA2E7 /* TimerDetailsView.swift in Sources */,
 				5545D58C29ACB5B6008C7583 /* WorkoutModel.swift in Sources */,
@@ -626,6 +649,7 @@
 				5545D54D29A61006008C7583 /* UIView + Extensions.swift in Sources */,
 				5545D56E29A7A53A008C7583 /* NewWorkoutViewController.swift in Sources */,
 				5545D58729A9F10C008C7583 /* StatisticTableView.swift in Sources */,
+				55CB3BAC29DD8076001DDE88 /* NetworkRequest.swift in Sources */,
 				55CB3BA529DC2CAF001DDE88 /* UserModel.swift in Sources */,
 				5545D56629A766E2008C7583 /* UILabel + Extensions.swift in Sources */,
 				55B7CBB129C1E66B00FFA2E7 /* TimerWorkoutViewController.swift in Sources */,

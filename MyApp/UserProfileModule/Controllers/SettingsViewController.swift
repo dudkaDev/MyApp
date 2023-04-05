@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PhotosUI
 
 class SettingsViewController: UIViewController {
     
@@ -146,7 +147,12 @@ class SettingsViewController: UIViewController {
     @objc private func setUserPhoto() {
         alertPhotoOrCamera { [weak self] source in
             guard let self = self else { return }
-            self.chooseImagePicker(source: source)
+            
+            if #available(iOS 14.0, *) {
+                self.presentPHPicker()
+            } else {
+                self.chooseImagePicker(source: source)
+            }
         }
     }
     
@@ -199,6 +205,36 @@ class SettingsViewController: UIViewController {
             addPhotoImageView.image = image
             addPhotoImageView.contentMode = .scaleAspectFit
         }
+    }
+}
+
+//MARK: - PHPickerViewControllerDelegate
+
+@available(iOS 14.0, *)
+extension SettingsViewController: PHPickerViewControllerDelegate {
+    
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true)
+        results.forEach { result in
+            result.itemProvider.loadObject(ofClass: UIImage.self) { reading, error in
+                guard let image = reading as? UIImage, error == nil else { return }
+                
+                DispatchQueue.main.async {
+                    self.addPhotoImageView.image = image
+                    self.addPhotoImageView.contentMode = .scaleAspectFill
+                }
+            }
+        }
+    }
+    
+    private func presentPHPicker() {
+        var phPickerConfig = PHPickerConfiguration(photoLibrary: .shared())
+        phPickerConfig.selectionLimit = 1
+        phPickerConfig.filter = PHPickerFilter.any(of: [.images])
+        
+        let phPickerVC = PHPickerViewController(configuration: phPickerConfig)
+        phPickerVC.delegate = self
+        present(phPickerVC, animated: true)
     }
 }
 
